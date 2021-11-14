@@ -1,0 +1,4 @@
+./ex*
+./project*/p*/.settings
+./project*/p*/.classpath
+./project*/p*/.project
