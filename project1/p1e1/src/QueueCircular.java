@@ -89,20 +89,21 @@ public class QueueCircular<Item> implements Iterable<Item> {
     }
 
     /**
-     * Adds the item to this queue.
+     * Adds the item to specified queue.
      *
-     * @param  item the item to add
+     * @param  item: the item to add
+     * @param  q: the queue you want to insert the item
      */
-    public void enqueue(QueueCircular<Item> q,Item item) {
-    	Node<Item> temp = new Node<>();
-    	temp.item = item;
-    	if (q.first == null)
-    		q.first=temp;
+    public void enqueue(QueueCircular<Item> q,Item item) {  
+    	Node<Item> temp = new Node<>();  // creates new temp Node object that contains items
+    	temp.item = item; 		// stores the item into the temp node
+    	if (q.first == null) 	// if the passed q has no nodes
+    		q.first=temp;		// the temp node that contains the item becomes the first node in the queue
     	else
-    		q.last.next = temp;
+    		q.last.next = temp;	// else the next pointer becomes the temp node that contains the item
     	
-    	q.last = temp;
-    	q.last.next = q.first;
+    	q.last = temp;			// the temp node becomes last node
+    	q.last.next = q.first;	// and the pointer from the next node from the last node pinpoints to first node
     	
     	//old implementation
     	/******************************
@@ -117,31 +118,31 @@ public class QueueCircular<Item> implements Iterable<Item> {
     }
 
     /**
-     * Removes and returns the item on this queue that was least recently added.
+     * Removes and returns the item on specific queue that was least recently added.
      *
      * @return the item on this queue that was least recently added
-     * @throws NoSuchElementException if this queue is empty
+     *
      */
     public Item dequeue(QueueCircular<Item> q) {
     	
     	if (q.first == null) {
-    		StdOut.println("Queue is Empty");
-    		return null;	
+    		StdOut.println("Queue is Empty");	// if queue is empty print Queue is Empty
+    		return null;						// and return null
     	}
     	
-    	Item value;
-    	if (q.first == q.last) {
-    		value = q.first.item;
-    		q.first = null;
-    		q.last = null;
-    	}else {
-    		Node<Item> temp = q.first;
-    		value = (Item) temp.item;
-    		q.first = q.first.next;
-    		q.last.next = q.first;
+    	Item value;								// Creates a temp Item object with name of value
+    	if (q.first == q.last) {				// if queue has only left one node
+    		value = q.first.item;				// the value takes the value from the remaining node
+    		q.first = null;						// 
+    		q.last = null;						// and the pointers initializes with pinpointing to nowhere
+    	}else {									// else if the queue has more than one remaining node 
+    		Node<Item> temp = q.first;			// create a new node containing items with name temp and pass into it the first pointer from the q
+    		value = (Item) temp.item;			// pass the value of the temp item that has the first value of the queue 
+    		q.first = q.first.next;				// the first pointer changes to indicate the next node  
+    		q.last.next = q.first;				// the next pointer of the last node pinpoints into the newly first node that changed previously 
     	}
-    	n--;
-    	return value;
+    	n--;									// reduces the size
+    	return value;							// returns the value
     	
     	//old implementation
     	/************************************************

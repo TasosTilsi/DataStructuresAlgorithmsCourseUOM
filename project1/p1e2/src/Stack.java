@@ -142,8 +142,8 @@ public class Stack<Item> implements Iterable<Item> {
     public String firstThreeInsertedItemsDisplay() {
         StringBuilder s = new StringBuilder();
         for (Item item : this) {
-        	pop();
-        	if(size()<3) {
+        	pop(); //removes from stack one by one the items that are inserted
+        	if(size()<3) { //if the size of the stack is below 3 items start print
         		s.append(item);
         		s.append(' ');
         	}
