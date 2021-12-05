@@ -1,0 +1,181 @@
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 1
+Item to push: 4
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 4
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 1
+Item to push: 3
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 3
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 1
+Item to push: 5
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 3
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 1
+Item to push: 3
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 3
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 1
+Item to push: 2
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 2
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 1
+Item to push: 1
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 1
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 2
+Popped Item: 1
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 2
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 2
+Popped Item: 2
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 3
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 2
+Popped Item: 3
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 3
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 2
+Popped Item: 5
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 3
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 2
+Popped Item: 3
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Item: 4
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 2
+Popped Item: 4
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 3
+Minimum Stack is empty!
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 2
+Minimum Stack is empty!
+Menu
+1 - Push an item
+2 - Pop an item
+3 - Get the Minimum Item
+4 - Exit
+Choice: 4

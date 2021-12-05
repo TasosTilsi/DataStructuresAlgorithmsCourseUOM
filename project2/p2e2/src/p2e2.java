@@ -1,3 +1,13 @@
+/******************************************************************************
+ * Compilation: javac p2e2.java
+ * Execution:
+ java p2e2 < in-p2e2.txt > out-p2e2.txt
+ * Dependencies: StdIn.java StdOut.java MergeX.java Student.java
+ * Data files:
+ in-p2e2.txt
+ *
+ ******************************************************************************/
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
