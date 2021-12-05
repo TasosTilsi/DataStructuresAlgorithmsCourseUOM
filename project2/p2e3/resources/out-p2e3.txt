@@ -1,0 +1,8 @@
+array1: size = 
+4
+       14         2        10         8 
+array2: size = 
+4
+       15         5        10        20 
+Asked Number to find the closest pair: x = 14
+The closest pair is [8, 5]
