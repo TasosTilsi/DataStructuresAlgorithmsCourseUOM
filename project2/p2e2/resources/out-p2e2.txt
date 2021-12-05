@@ -1,0 +1,66 @@
+By name ascending
+----------
+Flourentzos: 2025: 6.50: 27/08/2021
+Klimanoglou: 2024: 8.77: 02/09/2021
+Papadopoulos: 2024: 8.50: 21/10/2021
+Siskou: 2022: 7.00: 26/09/2021
+Stefanidou: 2023: 9.00: 12/10/2021
+Tilsizoglou: 2023: 8.50: 27/09/2021
+
+By name descending
+----------
+Tilsizoglou: 2023: 8.50: 27/09/2021
+Stefanidou: 2023: 9.00: 12/10/2021
+Siskou: 2022: 7.00: 26/09/2021
+Papadopoulos: 2024: 8.50: 21/10/2021
+Klimanoglou: 2024: 8.77: 02/09/2021
+Flourentzos: 2025: 6.50: 27/08/2021
+
+By date ascending
+----------
+Flourentzos: 2025: 6.50: 27/08/2021
+Klimanoglou: 2024: 8.77: 02/09/2021
+Siskou: 2022: 7.00: 26/09/2021
+Tilsizoglou: 2023: 8.50: 27/09/2021
+Stefanidou: 2023: 9.00: 12/10/2021
+Papadopoulos: 2024: 8.50: 21/10/2021
+
+By grade ascending
+----------
+Flourentzos: 2025: 6.50: 27/08/2021
+Siskou: 2022: 7.00: 26/09/2021
+Tilsizoglou: 2023: 8.50: 27/09/2021
+Papadopoulos: 2024: 8.50: 21/10/2021
+Klimanoglou: 2024: 8.77: 02/09/2021
+Stefanidou: 2023: 9.00: 12/10/2021
+
+By year ascending
+----------
+Siskou: 2022: 7.00: 26/09/2021
+Tilsizoglou: 2023: 8.50: 27/09/2021
+Stefanidou: 2023: 9.00: 12/10/2021
+Papadopoulos: 2024: 8.50: 21/10/2021
+Klimanoglou: 2024: 8.77: 02/09/2021
+Flourentzos: 2025: 6.50: 27/08/2021
+
+By grade and year ascending
+----------
+Flourentzos: 2025: 6.50: 27/08/2021
+Siskou: 2022: 7.00: 26/09/2021
+Tilsizoglou: 2023: 8.50: 27/09/2021
+Papadopoulos: 2024: 8.50: 21/10/2021
+Klimanoglou: 2024: 8.77: 02/09/2021
+Stefanidou: 2023: 9.00: 12/10/2021
+
+By Tilsizoglou
+----------
+Tilsizoglou: 2023: 8.50: 27/09/2021
+Flourentzos: 2025: 6.50: 27/08/2021
+Klimanoglou: 2024: 8.77: 02/09/2021
+Papadopoulos: 2024: 8.50: 21/10/2021
+Siskou: 2022: 7.00: 26/09/2021
+Stefanidou: 2023: 9.00: 12/10/2021
+
+me.equals(students.contains(students.get(0))):   true
+me.equals(new Student):   false
+me.equals(fred):  false

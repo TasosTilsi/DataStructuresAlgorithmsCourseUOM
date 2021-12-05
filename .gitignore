@@ -4,3 +4,7 @@ project*/p*/.project
 project*/p*/bin
 exercise*/
 example*/
+/project*/p*/*iml
+/project*/p*/.idea
+/project*/p*/out
+*.class
