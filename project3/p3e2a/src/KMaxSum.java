@@ -26,35 +26,24 @@ public class KMaxSum {
             }
         }
 
-//        System.out.println("");
-//        printArrayKeysInPq(keysInPq);
-//        System.out.println("");
-
-        // Pop first K elements
-        // from max heap and
-        // display them.
-        int temp = pq.max();
-        int count = 0;
-        int oldMax = -1;
-
-//        for (int i = 0; i < keysInPq.size(); i++) {
-//            System.out.println(String.format("sum=%d, a[%d]=%d, b[%d]=%d", keysInPq.get(count).sum, keysInPq.get(count).nums1Index, ar1[keysInPq.get(count).nums1Index], keysInPq.get(count).nums2Index, ar2[keysInPq.get(count).nums2Index]));
-//            System.out.print("k=" + count + " ");
-//            printArrayKeysInPq(keysInPq);
-//            keysInPq.remove(count);
-//            oldMax = pq.delMax();
-//        }
-
-        while (count < k) {
-//            if (keysInPq.get(count).sum != oldMax) {
-            System.out.println(String.format("sum=%d, a[%d]=%d, b[%d]=%d", keysInPq.get(count).sum, keysInPq.get(count).nums1Index, ar1[keysInPq.get(count).nums1Index], keysInPq.get(count).nums2Index, ar2[keysInPq.get(count).nums2Index]));
-            System.out.print("k=" + count + " ");
-            printArrayKeysInPq(keysInPq);
-            keysInPq.remove(count);
-            oldMax = pq.delMax();
-            temp = pq.max();
-//            }
-            count++;
+        // Traverse the sorted array
+        for (int i = 0; i < keysInPq.size(); i++) {
+            // Move the index ahead while
+            // there are duplicates
+            while (i < keysInPq.size() - 1 && keysInPq.get(i).sum == keysInPq.get(i + 1).sum) {
+                i++;
+                System.out.print(keysInPq.get(i).sum + " ");
+            }
+            // print last occurrence of
+            // the current element
+            if (k > 0) {
+                System.out.print(keysInPq.get(i).sum + " ");
+                System.out.println(String.format("sum=%d, a[%d]=%d, b[%d]=%d", keysInPq.get(i).sum, keysInPq.get(i).nums1Index, ar1[keysInPq.get(i).nums1Index], keysInPq.get(i).nums2Index, ar2[keysInPq.get(i).nums2Index]));
+                System.out.print("k=" + k + " ");
+                printArrayKeysInPq(keysInPq, keysInPq.get(i).sum);
+                k--;
+            }
+            pq.delMax();
         }
     }
 
@@ -67,14 +56,17 @@ public class KMaxSum {
         System.out.println("");
     }
 
-    private static void printArrayKeysInPq(ArrayList<Node> ar, int i) {
+    private static void printArrayKeysInPq(ArrayList<Node> ar, Integer sum) {
 //        ar.sort(Node::compareTo);
         System.out.print("keys in pq:");
-        for (int j = i; j < ar.size(); j++) {
-            System.out.print("[" + ar.get(j).nums1Index + ", " + ar.get(j).nums2Index + ", " + ar.get(j).sum + "]");
+        for (Node child : ar) {
+            if (child.sum <= sum) {
+                System.out.print("[" + child.nums1Index + ", " + child.nums2Index + ", " + child.sum + "]");
+            }
         }
         System.out.println("");
     }
+
 
     static class Node implements Comparable<Node> {
         public int nums1Index;
