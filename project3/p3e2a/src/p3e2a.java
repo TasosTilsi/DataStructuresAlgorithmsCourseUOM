@@ -5,6 +5,7 @@
  * Dependencies: StdIn.java StdOut.java Stack.java StackWithMinMax.java
  * Data files: in-p3e2a.txt
  ******************************************************************************/
+
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -27,8 +28,6 @@ public class p3e2a {
 
         printArray(array1, 0);//print sorted array1
         printArray(array2, 0);//print sorted array2
-
-        KMaxSum maxSum = new KMaxSum();
 
         KMaxSum.findMaxSum(array1, array2, k);
 
