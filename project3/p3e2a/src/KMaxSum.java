@@ -32,7 +32,6 @@ public class KMaxSum {
             // there are duplicates
             while (i < keysInPq.size() - 1 && keysInPq.get(i).sum == keysInPq.get(i + 1).sum) {
                 i++;
-                System.out.print(keysInPq.get(i).sum + " ");
             }
             // print last occurrence of
             // the current element
