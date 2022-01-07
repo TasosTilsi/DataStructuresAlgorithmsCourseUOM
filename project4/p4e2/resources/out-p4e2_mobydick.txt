@@ -1,0 +1,1 @@
+Size of input file = 209341, Unique size= 31809

@@ -1,0 +1,6 @@
+Hash table size = 80
+N = 1000, Number of Key-value pairs = 610, max chain size = 24, min chain size = 13
+----MinChain----
+598 613 456 837 321 112 490 249 972 583 370 871 748 
+----MaxChain----
+372 118 69 592 987 611 865 509 850 255 729 492 970 103 357 880 746 479 204 327 626 462 342 84 

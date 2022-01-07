@@ -1,0 +1,22 @@
+Size of input file = 60, Unique size= 20
+it
+was
+the
+best
+of
+times
+worst
+age
+wisdom
+foolishness
+epoch
+belief
+incredulity
+season
+light
+darkness
+spring
+hope
+winter
+despair
+
