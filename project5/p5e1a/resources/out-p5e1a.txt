@@ -2,8 +2,9 @@ dog false
 cat false
 bear false
 bear true
-0 - dog
-1 - cat
-2 - bear
+
+dog - null
+bear - cat
+cat - dog
 
 Size = 3

@@ -1,7 +1,7 @@
 /******************************************************************************
- * Compilation: javac p5e1a.java
- * Execution: java p5e1a < ../resources/list.txt > ../resources/out-p5e1a.txt
- * Dependencies: ThreadStrings.java StdIn.java StdOut.java
+ * Compilation: javac p5e1b.java
+ * Execution: java p5e1b < ../resources/list.txt > ../resources/out-p5e1b.txt
+ * Dependencies: ThreadStrings.java RedBlackBST.java Queue.java StdIn.java StdOut.java
  * Data files: list.txt
  *
  ******************************************************************************/
@@ -22,6 +22,7 @@ public class p5e1b {
             StdOut.println(value + " " + ts.contains(value));
             ts.add(value);//push strings into ts
         }
+        StdOut.println("");
         printData(ts);
     }
 
