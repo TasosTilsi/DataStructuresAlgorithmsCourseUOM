@@ -1,0 +1,10 @@
+dog false
+cat false
+bear false
+bear true
+
+dog - null
+cat - dog
+bear - cat
+
+Size = 3
