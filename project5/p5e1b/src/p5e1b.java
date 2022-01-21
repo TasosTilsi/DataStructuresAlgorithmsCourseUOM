@@ -16,10 +16,11 @@ public class p5e1b {
     }
 
     private static void readItemsFromFile(ThreadStrings ts) {
-
+        StdOut.println("Adding keys in Structure");
+        StdOut.println("");
         while (!StdIn.isEmpty()) {
             String value = StdIn.readString();  //reads input from Standard Input
-            StdOut.println(value + " " + ts.contains(value));
+            printIfKeyExistsInStructure(value, ts);
             ts.add(value);//push strings into ts
         }
         StdOut.println("");
@@ -29,6 +30,10 @@ public class p5e1b {
     private static void printData(ThreadStrings ts) {
         StdOut.println(ts.toString());
         StdOut.println(String.format("Size = %d", ts.size()));
+    }
+
+    private static void printIfKeyExistsInStructure(String value, ThreadStrings ts){
+        StdOut.println("Checking if Key contained in Structure: "+value + " " + ts.contains(value));
     }
 
 }

@@ -1,7 +1,9 @@
-dog false
-cat false
-bear false
-bear true
+Adding keys in Structure
+
+Checking if Key contained in Structure: dog false
+Checking if Key contained in Structure: cat false
+Checking if Key contained in Structure: bear false
+Checking if Key contained in Structure: bear true
 
 bear - cat
 cat - dog

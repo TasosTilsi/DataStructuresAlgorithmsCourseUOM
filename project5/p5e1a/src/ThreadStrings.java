@@ -1,12 +1,12 @@
-import java.util.Map;
-
 public class ThreadStrings {
 
     private SeparateChainingHashST<String, String> set;
     private int size = 0;
+    private String previousKey;
 
     ThreadStrings() {
-        this.set = new SeparateChainingHashST<>();
+        this.set = new SeparateChainingHashST<>(1);
+        previousKey = "null";
     }
 
     /**
@@ -16,9 +16,9 @@ public class ThreadStrings {
      */
     public void add(String s) {
         if (set.isEmpty() || !contains(s)) {
-//            System.out.println("PUTTING --> "+s +"-"+ previousKey(s));
-            set.put(s, previousKey(s));
+            set.put(s, previousKey);
             size++;
+            previousKey = s;
         }
     }
 
@@ -42,22 +42,12 @@ public class ThreadStrings {
      * @param s given String
      */
     public String previousKey(String s) {
-        String previousKey = "null";
-
-        for (String key : set.keys()) {
-            if (key.equals(s)) {
-                break;
-            }
-            previousKey = key;
-        }
-//        System.out.println("PREVIOUS KEY= "+previousKey);
-        return previousKey;
+        return set.get(s);
     }
 
     public int size() {
         return size;
     }
-
 
     public String toString() {
         StringBuilder s = new StringBuilder();
@@ -73,29 +63,18 @@ public class ThreadStrings {
      */
     public static void main(String[] args) {
         ThreadStrings ts = new ThreadStrings();
-        ts.add("tiger");
         ts.add("dog"); // [ "dog" ]
         ts.add("cat"); // [ "dog", "cat" ]
         ts.add("bear"); // ["dog", "cat, "bear"]
-        ts.add("bear"); // ["dog", "cat, "bear"]  // (η προσθήκη διπλότυπου δεν έχει κάποια επίδραση στο νήμα)
-        System.err.println("-----------------------------------------------------------------------");
+        ts.add("bear"); // ["dog", "cat, "bear"]
+        System.out.println("-----------------------------------------------------------------------");
         StdOut.println(ts.toString());
-        StdOut.println(ts.size());
-        StdOut.println(ts.set.getMinChainSize());
-        StdOut.println(ts.set.getMaxChainSize());
-        StdOut.println(ts.set.showMinChainKeys());
-        StdOut.println(ts.set.showMaxChainKeys());
-        StdOut.println(ts.size());
-        StdOut.println(ts.set.get("dog").equals("null"));
-        StdOut.println(ts.set.get("cat").equals("dog"));
-        StdOut.println(ts.set.get("bear").equals("cat"));
         StdOut.println(ts.size());
         StdOut.println(ts.contains("dog")); // true
         StdOut.println(ts.contains("tiger")); // false
         StdOut.println(ts.previousKey("cat"));// "dog"
         StdOut.println(ts.previousKey("bear"));// "cat"
         StdOut.println(ts.previousKey("dog"));// null
-        StdOut.println(ts.previousKey("tiger"));// null
     }
 
 }

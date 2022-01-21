@@ -18,7 +18,6 @@ public class ThreadStrings {
      */
     public void add(String s) {
         if (set.isEmpty() || !contains(s)) {
-//            System.out.println("PUTTING --> "+s +"-"+ previousKey);
             set.put(s, previousKey);
             previousKey = s;
             size++;
@@ -74,15 +73,6 @@ public class ThreadStrings {
         System.out.println("-----------------------------------------------------------------------");
         StdOut.println(ts.toString());
         StdOut.println(ts.size());
-//        StdOut.println(ts.set.getMinChainSize());
-//        StdOut.println(ts.set.getMaxChainSize());
-//        StdOut.println(ts.set.showMinChainKeys());
-//        StdOut.println(ts.set.showMaxChainKeys());
-//        StdOut.println(ts.size());
-//        StdOut.println(ts.set.get("dog").equals("null"));
-//        StdOut.println(ts.set.get("cat").equals("dog"));
-//        StdOut.println(ts.set.get("bear").equals("cat"));
-//        StdOut.println(ts.size());
         StdOut.println(ts.contains("dog")); // true
         StdOut.println(ts.contains("tiger")); // false
         StdOut.println(ts.previousKey("cat"));// "dog"

@@ -9,7 +9,7 @@ public class ThreadStrings {
     private String previousKey;
 
     ThreadStrings() {
-        this.set = new LinkedHashMap<>();
+        this.set = new HashMap<>();
         previousKey=null;
     }
 
@@ -40,14 +40,6 @@ public class ThreadStrings {
      * @param s given String
      */
     public String previousKey(String s) {
-//        String previousKey = null;
-//
-//        for (Map.Entry<String, String> entry : set.entrySet()) {
-//            if (entry.getKey().equals(s)) {
-//                break;
-//            }
-//            previousKey = entry.getKey();
-//        }
 
         return set.get(s);
     }
