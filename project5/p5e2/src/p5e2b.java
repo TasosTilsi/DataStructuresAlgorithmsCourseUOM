@@ -6,13 +6,13 @@ import java.util.Locale;
 import java.util.Scanner;
 
 /******************************************************************************
- * Compilation: javac p5e2a.java
- * Execution: java p5e2a ../resources/in-p5e2.txt > ../resources/out-p5e2a.txt
- * Dependencies: TST.java Queue.java StdIn.java StdOut.java
+ * Compilation: javac p5e2b.java
+ * Execution: java p5e2b ../resources/in-p5e2.txt > ../resources/out-p5e2b.txt
+ * Dependencies: ST.java Queue.java StdIn.java StdOut.java
  * Data files: in-p5e2.txt
  *
  ******************************************************************************/
-public class p5e2a {
+public class p5e2b {
 
     private final static boolean DEBUG_MODE = false;
 
@@ -29,13 +29,13 @@ public class p5e2a {
             path = args[0]; //passed argument from command line execution if exists
         }
 
-        if (DEBUG_MODE) System.out.println(path);
+        if(DEBUG_MODE) System.out.println(path);
 
-        TST<String> tst = new TST<>();
+        ST<String, String> st = new ST<>();
 
-        readItemsFromFile(path, tst);
+        readItemsFromFile(path, st);
 
-        printData(path, tst);
+        printData(path, st);
 
     }
 
@@ -43,12 +43,12 @@ public class p5e2a {
      * print data
      *
      * @param path
-     * @param tst
+     * @param st
      */
-    private static void printData(String path, TST<String> tst) {
+    private static void printData(String path, ST<String, String> st) {
         StdOut.println("Index of File: " + Paths.get(path).getFileName());
-        for (String key : tst.keys()) {
-            StdOut.println(key + " " + tst.get(key));
+        for (String key : st.keys()) {
+            StdOut.println(key + " " + st.get(key));
         }
     }
 
@@ -56,9 +56,9 @@ public class p5e2a {
      * read each line from the given file
      *
      * @param path
-     * @param tst
+     * @param st
      */
-    private static void readItemsFromFile(String path, TST<String> tst) {
+    private static void readItemsFromFile(String path, ST<String, String> st) {
 
         try {
             File myObj = new File(path);
@@ -68,14 +68,13 @@ public class p5e2a {
                 String data = myReader.nextLine().toLowerCase(Locale.ROOT).replaceAll("[~,.!'`;\":/#$%^&*()-_+={}?<>]", "");
                 line++;
                 if (data.isEmpty()) continue;
-                getLinesHidesTheWord(data, line, tst);
+                getLinesHidesTheWord(data, line, st);
             }
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
     }
 
     /**
@@ -83,9 +82,9 @@ public class p5e2a {
      *
      * @param data
      * @param line
-     * @param tst
+     * @param st
      */
-    private static void getLinesHidesTheWord(String data, int line, TST<String> tst) {
+    private static void getLinesHidesTheWord(String data, int line, ST<String, String> st) {
         if (DEBUG_MODE) System.out.println(data);
         String[] words = data.split("\\s+");
         if (DEBUG_MODE) System.out.println(Arrays.toString(words));
@@ -93,10 +92,10 @@ public class p5e2a {
 
             if (word.isEmpty()) continue;
 
-            if (tst.contains(word)) {
-                tst.put(word, tst.get(word) + "-" + line);
+            if (st.contains(word)) {
+                st.put(word, st.get(word) + "-" + line);
             } else {
-                tst.put(word, String.valueOf(line));
+                st.put(word, String.valueOf(line));
             }
         }
 
