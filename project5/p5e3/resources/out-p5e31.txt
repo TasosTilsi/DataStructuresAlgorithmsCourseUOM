@@ -1,0 +1,4 @@
+
+Number of occurrences: 3
+abacadabrabracabracadabrabrabracad
+        rab            rabrab
